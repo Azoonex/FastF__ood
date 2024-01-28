@@ -1,9 +1,11 @@
-import './assets/index.scss'
+import "./assets/sass/_app.scss"
+import Navbar from './components/layout/Navbar'
 
 function App() {
   return (
     <div>
-      <h1>hellow word</h1>
+      
+      <Navbar/>
     </div>
   )
 }
