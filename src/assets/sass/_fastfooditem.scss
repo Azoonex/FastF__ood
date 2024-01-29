@@ -1,0 +1,17 @@
+// FAST FOOD LIEST
+
+// FAST FOOD ITEM
+.card {
+    position: relative;
+    transition: all 1s;
+
+    &:hover {
+        box-shadow: 3px 0px 47px -9px rgb(0 0 0 / 75%);
+    }
+
+    .badge-end {
+        position: absolute;
+        right: 10px;
+        top: 17px;
+    }
+}
