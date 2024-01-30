@@ -2,6 +2,23 @@
 
 body{
   direction: rtl;
+  overflow-y: scroll;
+}
+
+.fadeinhorz{
+  animation: fadeInInHoriz 1s ease forwards;
+}
+
+@keyframes fadeInInHoriz {
+    0%{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 *,::after,
