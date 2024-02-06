@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react"
-import "./assets/sass/_app.scss"
 import Navbar from './components/layout/Navbar'
 import axios from "./axios";
 import FastFoodList from "./components/FastFoodList";
 import Loding from "./components/Loding";
 import SearchBar from "./components/SearchBar";
 import notFound from '../public/notfound.png'
+import Survey from "./components/Survey";
 
 const App: React.FC = () => {
   const [isLoding, setLoding] = useState(false);
@@ -70,6 +70,7 @@ const App: React.FC = () => {
               )
         }
       </div>
+      <Survey />
     </div>
   )
 }

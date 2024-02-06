@@ -6,3 +6,8 @@ export default interface typeFoastFoodeProps {
     imageUrl :string;
     dalay? : number
 }
+
+export interface typeSurveyProps {
+    url: string;
+    pageSize:number
+}

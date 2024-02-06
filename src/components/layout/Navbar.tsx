@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "../../assets/sass/_navbar.scss"
 import axios from "../../axios";
 import Loding from "../Loding";
 
@@ -34,8 +33,8 @@ const Navbar: React.FC = ({ filterItems,children }:any) => {
         </a>
         {
           navList.map(item => (
-           <div>
-              <a key={item.id} href="#" onClick={() => filterItems(item.id)}>
+            <div key={item.id}>
+              <a href="#" onClick={() => filterItems(item.id)}>
                 {item.name}
               </a>
            </div>

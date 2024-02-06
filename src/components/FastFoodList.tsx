@@ -2,7 +2,6 @@ import FastFoodItem from "./FastFoodItem";
 
 
 function FastFoodList({ fastFoodeItems }: any) {
-  console.log(fastFoodeItems);
   let dalay = 0.1
   return (
     <div
