@@ -1,5 +1,5 @@
 import{ useEffect, useState } from 'react';
-import * as _  from 'lodash';
+import _ from 'lodash';
 import { typeSurveyProps } from '../types/type';
 
 function usePaginatedFech({ url, pageSize }: typeSurveyProps) {
@@ -12,11 +12,14 @@ function usePaginatedFech({ url, pageSize }: typeSurveyProps) {
 
         const paginatedData = _.chunk(data, pageSize);
         console.log(paginatedData);
-
-        setData(paginatedData);
+        
+       
+        console.log(data);
+        
+        setData(paginatedData as unknown[][] as never[]);
         setLoding(false);
     };
-
+    
     useEffect(() => {
         getData();
     }, []);

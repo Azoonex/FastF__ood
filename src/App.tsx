@@ -5,7 +5,8 @@ import FastFoodList from "./components/FastFoodList";
 import Loding from "./components/Loding";
 import SearchBar from "./components/SearchBar";
 import notFound from '../public/notfound.png'
-import Survey from "./components/Survey";
+import { useThemContent } from "./context/context";
+
 
 const App: React.FC = () => {
   const [isLoding, setLoding] = useState(false);
@@ -36,15 +37,11 @@ const App: React.FC = () => {
     setFastFoodItem(response.data)
   }
 
-  // const renderContent = ()=>{
-  //   if (isLoding){
-  //     return <Loding theme="primary" />
-  //   }
-  //   if(fastFoodItem.length === 0)
-  // }
+  const them = useThemContent()
+  const darkMode = them.darkMode;
 
   return (
-    <div>
+    <div className={`${darkMode ? 'bg-dark' : 'bg-light ' }`}>
       <Navbar filterItems={filterItems} >
         <SearchBar searchItem={searchItem} />
       </Navbar>
@@ -70,7 +67,7 @@ const App: React.FC = () => {
               )
         }
       </div>
-      <Survey />
+      
     </div>
   )
 }

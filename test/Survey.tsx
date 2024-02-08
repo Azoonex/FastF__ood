@@ -26,7 +26,7 @@ function Survey() {
         !loading && (
           <div className="row d-flex justify-content-center ">
             {
-              programers.map(({ id, ...programer })=>{
+              programers.map(( id, ...programer )=>{
                 return (
                   <div className="col-3" key={id}>
                     programer

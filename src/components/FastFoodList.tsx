@@ -6,7 +6,7 @@ function FastFoodList({ fastFoodeItems }: any) {
   return (
     <div
       style={{ margin: " 70px 42px" }}
-      className="row row-gap-3 main">
+      className="row row-gap-3 main ">
       {
         fastFoodeItems.map((item): any => {
           dalay += 0.030;
