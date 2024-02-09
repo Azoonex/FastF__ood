@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "../../axios";
 import Loding from "../Loding";
 import { useThemContent } from "../../context/context";
+import { Link } from "react-router-dom";
 
 
 const Navbar: React.FC = ({ filterItems,children }:any) => {
@@ -56,6 +57,13 @@ const Navbar: React.FC = ({ filterItems,children }:any) => {
       onClick={changeThem}
       type="button" className={`btn ${darkMode ? 'btn-light ' : 'btn-dark'}  pointer-event position-absolute top-0 `}>
         {darkMode ? 'light' : 'dark'}
+      </button>
+      <button>
+        <Link 
+        className="btn btn-danger pointer-event position-absolute top-0 start-0 "
+          to="/shopfood" >
+           go shop food 
+        </Link>
       </button>
     </header>
   )

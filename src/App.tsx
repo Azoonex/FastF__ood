@@ -6,7 +6,8 @@ import Loding from "./components/Loding";
 import SearchBar from "./components/SearchBar";
 import notFound from '../public/notfound.png'
 import { useThemContent } from "./context/context";
-
+import routes from './routes.tsx';
+import { useRoutes } from "react-router-dom";
 
 const App: React.FC = () => {
   const [isLoding, setLoding] = useState(false);
@@ -40,6 +41,8 @@ const App: React.FC = () => {
   const them = useThemContent()
   const darkMode = them.darkMode;
 
+  let router = useRoutes(routes)
+
   return (
     <div className={`${darkMode ? 'bg-dark' : 'bg-light ' }`}>
       <Navbar filterItems={filterItems} >
@@ -67,7 +70,7 @@ const App: React.FC = () => {
               )
         }
       </div>
-      
+      {router}
     </div>
   )
 }
