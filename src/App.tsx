@@ -8,6 +8,8 @@ import notFound from '../public/notfound.png'
 import { useThemContent } from "./context/context";
 import routes from './routes.tsx';
 import { useRoutes } from "react-router-dom";
+import { Footer } from "./components/index.ts";
+
 
 const App: React.FC = () => {
   const [isLoding, setLoding] = useState(false);
@@ -71,6 +73,7 @@ const App: React.FC = () => {
         }
       </div>
       {router}
+      <Footer />
     </div>
   )
 }

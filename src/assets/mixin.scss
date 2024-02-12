@@ -6,6 +6,9 @@ $light : #fff;
 // FONT SIZE
 $f_title : 20px;
 $f_btn: 14px;
+$f_subtitle: 26px;
+$f_caption: 23px;
+$f_caption: 20px;
 
 @import '/node_modules/bootstrap/scss/bootstrap.scss';
 
@@ -25,3 +28,6 @@ $f_btn: 14px;
 @mixin for-big-desktop-up {
   @media (min-width: 1800px) { @content; }
 }
+
+
+

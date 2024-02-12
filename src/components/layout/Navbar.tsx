@@ -58,13 +58,6 @@ const Navbar: React.FC = ({ filterItems,children }:any) => {
       type="button" className={`btn ${darkMode ? 'btn-light ' : 'btn-dark'}  pointer-event position-absolute top-0 `}>
         {darkMode ? 'light' : 'dark'}
       </button>
-      <button>
-        <Link 
-        className="btn btn-danger pointer-event position-absolute top-0 start-0 "
-          to="/shopfood" >
-           go shop food 
-        </Link>
-      </button>
     </header>
   )
 }
