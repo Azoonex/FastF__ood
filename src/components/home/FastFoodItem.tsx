@@ -1,6 +1,6 @@
 import "../assets/sass/_fastfooditem.scss"
 import { HiShoppingCart } from 'react-icons/hi'
-import typeFoastFoodeProps from '../types/type'
+import typeFoastFoodeProps from '../../types/type'
 
 function FastFoodItem({ name, price, ingredients, imageUrl,dalay }: typeFoastFoodeProps) {
   return (

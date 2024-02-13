@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
 import Navbar from './components/layout/Navbar'
 import axios from "./axios";
-import FastFoodList from "./components/FastFoodList";
-import Loding from "./components/Loding";
-import SearchBar from "./components/SearchBar";
+import FastFoodList from "./components/home/FastFoodList.tsx";
+import Loding from "./components/common/Loding.tsx";
+import SearchBar from "./components/common/SearchBar.tsx";
 import notFound from '../public/notfound.png'
 import { useThemContent } from "./context/context";
 import routes from './routes.tsx';

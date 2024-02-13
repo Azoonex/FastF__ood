@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "../../axios";
-import Loding from "../Loding";
+import Loding from "../common/Loding";
 import { useThemContent } from "../../context/context";
 import { Link } from "react-router-dom";
 
