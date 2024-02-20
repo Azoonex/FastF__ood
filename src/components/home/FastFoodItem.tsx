@@ -1,4 +1,3 @@
-import "../assets/sass/_fastfooditem.scss"
 import { HiShoppingCart } from 'react-icons/hi'
 import typeFoastFoodeProps from '../../types/type'
 

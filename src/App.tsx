@@ -1,44 +1,12 @@
-import React, { useEffect, useState } from "react"
-import Navbar from './components/layout/Navbar'
-import axios from "./axios";
-import FastFoodList from "./components/home/FastFoodList.tsx";
-import Loding from "./components/common/Loding.tsx";
-import SearchBar from "./components/common/SearchBar.tsx";
-import notFound from '../public/notfound.png'
+import React from "react"
 import { useThemContent } from "./context/context";
 import routes from './routes.tsx';
 import { useRoutes } from "react-router-dom";
 import { Footer } from "./components/index.ts";
+import Home from "./components/home/Home.tsx";
 
 
 const App: React.FC = () => {
-  const [isLoding, setLoding] = useState(false);
-  const [fastFoodItem, setFastFoodItem] = useState([])
-
-
-  useEffect(() => {
-    fetchData();
-  }, [])
-
-  const fetchData = async (categoryId = null) => {
-    setLoding(true);
-    const response = await axios.get(`/FastFood/list/${categoryId ? '?categoryId=' + categoryId : ''}`)
-    setLoding(false);
-    setFastFoodItem(response.data);
-  }
-
-
-  const filterItems = (categoryId) => {
-    fetchData(categoryId);
-
-  }
-
-  const searchItem = async (term) => {
-    setLoding(true);
-    const response = await axios.get(`/FastFood/search/${term ? '?term=' + term : ''}`);
-    setLoding(false)
-    setFastFoodItem(response.data)
-  }
 
   const them = useThemContent()
   const darkMode = them.darkMode;
@@ -47,31 +15,7 @@ const App: React.FC = () => {
 
   return (
     <div className={`${darkMode ? 'bg-dark' : 'bg-light ' }`}>
-      <Navbar filterItems={filterItems} >
-        <SearchBar searchItem={searchItem} />
-      </Navbar>
-      <div className="container mt-4">
-        {
-          isLoding ? (
-            <Loding theme="primary" />
-          ) :
-
-            fastFoodItem.length === 0 ? (
-              <>
-                <div className="alert alert-warning mt-5 text-center fadeinhorz">
-                  ..برای کلید واژه فوق هیچ ایتمی یافت نشد
-                </div>
-                <img
-                  src={notFound}
-                  alt="notfound"
-                  className="mx-auto mt-2 d-block h-50 fadeinhorz" />
-              </>
-            )
-              : (
-                <FastFoodList fastFoodeItems={fastFoodItem} />
-              )
-        }
-      </div>
+     <Home />
       {router}
       <Footer />
     </div>
