@@ -1,9 +1,12 @@
 import {
     ShopFood,
-    CardShop
+    CardShop,
+    Home
 } from './components'
 
+
 let routes = [
+    {path : "/", element : <Home />},
     { path: '/shopfood', element: <ShopFood />},
     {
         path: '/shopFast/:Card', element: <CardShop />

@@ -7,6 +7,7 @@ import notFound from '../../../public/notfound.png'
 import { useThemContent } from "../../context/context"
 import Navbar from "../layout/Navbar"
 import FastFoodList from "./FastFoodList"
+import { Link } from "react-router-dom"
 
 
 function Home() {
@@ -42,6 +43,7 @@ function Home() {
     <div>
           <Navbar filterItems={filterItems} >
               <SearchBar searchItem={searchItem} />
+              <Link to="/shopfood">shopfood page</Link>
           </Navbar>
           <div className="container mt-4">
               {

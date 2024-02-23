@@ -1,11 +1,12 @@
-import ShopFood from "./routes/shopFood/ShopFood";
-import CardShop from "./routes/cardShop/CardShop";
+import ShopFood from "./page/ShopFood";
+import CardShop from "./page/CardShop";
 import Footer from "./layout/Footer";
 import Navbar from "./layout/Navbar";
-
+import Home from "./home/Home";
 export {
     ShopFood,
     CardShop,
     Footer,
-    Navbar
+    Navbar,
+    Home
 }
