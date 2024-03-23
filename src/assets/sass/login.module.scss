@@ -1,0 +1,18 @@
+@import "../mixin.scss";
+
+.login_container{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .login_content{
+            width: 80%;
+            height: 60%;
+            background-color: rgb(0, 0, 0,.66);
+
+    }
+}

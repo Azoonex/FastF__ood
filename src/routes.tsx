@@ -1,8 +1,9 @@
 import {
-    ShopFood,
-    CardShop,
-    Home
-} from './components'
+    Home,
+} from './components';
+import ShopFood from './page/ShopFood';
+import CardShop from './page/CardShop';
+import Login from './page/Login';
 
 
 let routes = [
@@ -10,6 +11,9 @@ let routes = [
     { path: '/shopfood', element: <ShopFood />},
     {
         path: '/shopFast/Card', element: <CardShop />
+    },
+    {
+        path: '/login', element: <Login />
     }
 ]
 
