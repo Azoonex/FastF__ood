@@ -1,4 +1,4 @@
-import React from "react"
+
 import { useThemContent } from "../../context/context"
 
 function MenuItem() {
