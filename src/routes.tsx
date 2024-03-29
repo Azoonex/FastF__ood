@@ -3,7 +3,7 @@ import {
 } from './components';
 import ShopFood from './page/ShopFood';
 import CardShop from './page/CardShop';
-import Login from './page/Login';
+import LoginMain from './page/LoginMain';
 
 
 let routes = [
@@ -13,7 +13,7 @@ let routes = [
         path: '/shopFast/Card', element: <CardShop />
     },
     {
-        path: '/login', element: <Login />
+        path: '/login', element: <LoginMain />
     }
 ]
 
