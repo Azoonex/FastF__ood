@@ -1,4 +1,4 @@
-import { Formik } from "formik"
+import { Formik, Form, Field } from "formik"
 
 const mainCotainer = {
     width: "100%",
@@ -14,28 +14,18 @@ function LoginMain() {
                     console.log("form inputs Data =>", values);
                 }}
             >
-                {({ values, handleChange,handleSubmit }) => (
-                    <form
-                    onSubmit={handleSubmit}
-                    className="d-flex flex-column w-50 h-50
-                            py-5 rounded shadow 
-                            bg-info align-items-center align-content-center gap-3">
+                {({ values, handleChange }) => (
+                    <Form
+                        className="d-flex flex-column w-50 h-50
+                                    py-5 rounded shadow 
+                                    bg-info align-items-center align-content-center gap-3">
                         <h3 className="text-white ">وارد شوید</h3>
-                        <input
-                        name="name"
-                            value={values.name}
-                            onChange={handleChange}
-                            placeholder="name..."
-                            required type="text" className="w-50 form-control" />
-                        <input
-                        name="email"
-                            value={values.email}
-                            onChange={handleChange}
-                            placeholder="email..."
-                            required type="email" className="w-50 form-control" />
+                        <Field type="text" name="name" placeholder="Name..." />
+                        <Field type="email" placeholder="Email..." name="email..." />
                         <button
+                            type="submit"
                             className="btn btn-danger ">تایید کنید</button>
-                    </form>
+                    </Form>
                 )}
 
             </Formik>
