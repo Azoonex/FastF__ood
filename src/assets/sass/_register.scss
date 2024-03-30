@@ -1,0 +1,10 @@
+@import './index.scss';
+
+.main_register{
+    width: 100%;
+    height: 100svh;
+    background-image: url('../img/regsiterimg.jpg');
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
